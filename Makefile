@@ -3,7 +3,7 @@ GIT_REVISION	= $(shell git rev-parse --short HEAD)
 VERSION		?= $(shell git describe --tags --abbrev=0)
 
 LDFLAGS		+= -linkmode external -extldflags -static
-LDFLAGS		+= -X github.com/keel-hq/keel/version.Version=$(VERSION)
+LDFLAGS		+= -X github.com/keel-hq/keel/version.Version=$(VERSION)-yseop
 LDFLAGS		+= -X github.com/keel-hq/keel/version.Revision=$(GIT_REVISION)
 LDFLAGS		+= -X github.com/keel-hq/keel/version.BuildDate=$(JOBDATE)
 
