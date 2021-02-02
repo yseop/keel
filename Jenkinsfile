@@ -21,6 +21,7 @@ pipeline {
         DOCKER_IMAGE            = 'keel'
         DOCKER_BUILD_TAG        = utils.getDockerBuildTag()
         DOCKER_TAG              = utils.getDockerTag()
+        SLACK_NOTIFY            = utils.getAuthorSlackHandle()
     }
 
     stages {
