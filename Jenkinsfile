@@ -78,13 +78,13 @@ pipeline {
         success {
             slackSend(
                 color: 'good',
-                message: "SUCCESSFUL: *anna_master* <${env.BUILD_URL}|[${env.BUILD_NUMBER}]> <@${SLACK_NOTIFY}>"
+                message: "SUCCESSFUL: Job <${env.BUILD_URL}|[${env.BUILD_NUMBER}]> <@${SLACK_NOTIFY}>"
             )
         }
         failure {
             slackSend(
                 color: 'danger',
-                message: "FAILED: *anna_master* <${env.BUILD_URL}console|[${env.BUILD_NUMBER}]> <@${SLACK_NOTIFY}>"
+                message: "FAILED: Job <${env.BUILD_URL}console|[${env.BUILD_NUMBER}]> <@${SLACK_NOTIFY}>"
             )
         }
         cleanup {
